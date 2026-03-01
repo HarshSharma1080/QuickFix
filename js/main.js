@@ -194,6 +194,21 @@
       dateInput.setAttribute("min", today);
     }
 
+    var servicePrices = {
+      electrician: 4000,
+      plumber: 5000,
+      carpenter: 5500,
+      painter: 6500,
+      ac_repair: 7500,
+      mechanic: 5500,
+      appliance: 5000,
+      locksmith: 4000
+    };
+
+    function formatINR(amount) {
+      return "\u20B9" + amount.toLocaleString("en-IN");
+    }
+
     // Pre-fill service from URL
     var params = new URLSearchParams(window.location.search);
     var preService = params.get("service");
@@ -201,17 +216,6 @@
       serviceSelect.value = preService;
       updateSummary();
     }
-
-    var servicePrices = {
-      electrician: 49,
-      plumber: 59,
-      carpenter: 69,
-      painter: 79,
-      ac_repair: 89,
-      mechanic: 69,
-      appliance: 59,
-      locksmith: 49
-    };
 
     function updateSummary() {
       if (!summaryService) return;
@@ -226,7 +230,7 @@
       if (date) {
         var parts = date.split("-");
         var d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
-        summaryDate.textContent = d.toLocaleDateString("en-US", {
+        summaryDate.textContent = d.toLocaleDateString("en-IN", {
           weekday: "short",
           month: "short",
           day: "numeric"
@@ -237,13 +241,13 @@
       summaryTime.textContent = time || "Not selected";
 
       var price = servicePrices[service] || 0;
-      summaryPrice.textContent = price ? "$" + price : "$0";
+      summaryPrice.textContent = price ? formatINR(price) : "\u20B90";
 
-      var emergencyFee = isEmergency ? 25 : 0;
-      summaryEmergency.textContent = emergencyFee ? "+$" + emergencyFee : "$0";
+      var emergencyFee = isEmergency ? 2000 : 0;
+      summaryEmergency.textContent = emergencyFee ? "+" + formatINR(emergencyFee) : "\u20B90";
 
       var total = price + emergencyFee;
-      summaryTotal.textContent = "$" + total;
+      summaryTotal.textContent = formatINR(total);
     }
 
     if (serviceSelect) serviceSelect.addEventListener("change", updateSummary);
@@ -255,6 +259,7 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (validateForm(form)) {
+        saveBooking(form);
         showModal();
       }
     });
@@ -264,10 +269,35 @@
     if (confirmBtn) {
       confirmBtn.addEventListener("click", function () {
         if (validateForm(form)) {
+          saveBooking(form);
           showModal();
         }
       });
     }
+  }
+
+  function saveBooking(form) {
+    var booking = {
+      service: form.querySelector("#service").value,
+      date: form.querySelector("#date").value,
+      time: form.querySelector("#time").value,
+      address: form.querySelector("#address").value,
+      description: form.querySelector("#description").value,
+      name: form.querySelector("#name").value,
+      phone: form.querySelector("#phone").value,
+      email: form.querySelector("#email").value,
+      emergency: form.querySelector("#emergency").checked,
+      bookedAt: new Date().toISOString()
+    };
+
+    var bookings = [];
+    try {
+      bookings = JSON.parse(localStorage.getItem("quickfix_bookings")) || [];
+    } catch (e) {
+      bookings = [];
+    }
+    bookings.push(booking);
+    localStorage.setItem("quickfix_bookings", JSON.stringify(bookings));
   }
 
   function validateForm(form) {
