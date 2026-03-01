@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickFix - Get home repairs done in 30 minutes. Book electricians, plumbers, carpenters, and more instantly.">
+  <title>QuickFix – Home Repairs in 30 Minutes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="QuickFix Home">
+        <i class="fas fa-wrench"></i>
+        <span>Quick</span><span>Fix</span>
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="index.html" class="active" role="menuitem">Home</a></li>
+        <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+        <li role="none"><a href="#how-it-works" role="menuitem">How It Works</a></li>
+        <li role="none"><a href="#emergency" role="menuitem">Emergency</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#emergency" class="nav-emergency" aria-label="Emergency services available">
+          <i class="fas fa-bolt"></i> Emergency
+        </a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-star"></i> Rated 4.9/5 by 50,000+ customers
+        </div>
+        <h1>Home Repairs in<br><span class="highlight">30 Minutes</span> <span class="accent">Guaranteed</span></h1>
+        <p class="hero-subtitle">Book verified electricians, plumbers, carpenters, and more — at your doorstep faster than you can finish your coffee.</p>
+        <form class="hero-search" role="search" aria-label="Search for a service">
+          <input type="text" placeholder="What do you need fixed? (e.g., leaking tap)" aria-label="Search services">
+          <button type="submit"><i class="fas fa-search"></i> Search</button>
+        </form>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>50K+</strong>
+            <span>Happy Customers</span>
+          </div>
+          <div class="hero-stat">
+            <strong>2,500+</strong>
+            <span>Verified Workers</span>
+          </div>
+          <div class="hero-stat">
+            <strong>30 min</strong>
+            <span>Avg. Response</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-illustration">
+          <i class="fas fa-tools"></i>
+          <div class="hero-float">
+            <i class="fas fa-check-circle text-success"></i> Verified Pro
+          </div>
+          <div class="hero-float">
+            <i class="fas fa-clock text-accent"></i> 30 min ETA
+          </div>
+          <div class="hero-float">
+            <i class="fas fa-shield-halved text-primary"></i> Insured
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service Categories ===== -->
+  <section class="section categories" id="services">
+    <div class="container">
+      <h2 class="section-title fade-in">What Do You Need Fixed?</h2>
+      <p class="section-subtitle fade-in">Choose from our wide range of home repair services</p>
+      <div class="categories-grid">
+        <a href="services.html?search=electrician" class="category-card fade-in" aria-label="Electrician services">
+          <div class="category-icon" style="background: linear-gradient(135deg, #FBBF24, #F59E0B);">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Electrician</h3>
+          <p>Wiring, switches &amp; more</p>
+        </a>
+        <a href="services.html?search=plumber" class="category-card fade-in" aria-label="Plumber services">
+          <div class="category-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">
+            <i class="fas fa-faucet-drip"></i>
+          </div>
+          <h3>Plumber</h3>
+          <p>Leaks, pipes &amp; drains</p>
+        </a>
+        <a href="services.html?search=carpenter" class="category-card fade-in" aria-label="Carpenter services">
+          <div class="category-icon" style="background: linear-gradient(135deg, #A78BFA, #7C3AED);">
+            <i class="fas fa-hammer"></i>
+          </div>
+          <h3>Carpenter</h3>
+          <p>Furniture &amp; woodwork</p>
+        </a>
+        <a href="services.html?search=painter" class="category-card fade-in" aria-label="Painter services">
+          <div class="category-icon" style="background: linear-gradient(135deg, #F472B6, #EC4899);">
+            <i class="fas fa-paint-roller"></i>
+          </div>
+          <h3>Painter</h3>
+          <p>Walls, ceilings &amp; trim</p>
+        </a>
+        <a href="services.html?search=ac" class="category-card fade-in" aria-label="AC Repair services">
+          <div class="category-icon" style="background: linear-gradient(135deg, #34D399, #10B981);">
+            <i class="fas fa-snowflake"></i>
+          </div>
+          <h3>AC Repair</h3>
+          <p>Cooling &amp; heating fix</p>
+        </a>
+        <a href="services.html?search=mechanic" class="category-card fade-in" aria-label="Mechanic services">
+          <div class="category-icon" style="background: linear-gradient(135deg, #FB923C, #F97316);">
+            <i class="fas fa-gears"></i>
+          </div>
+          <h3>Mechanic</h3>
+          <p>Home machinery repair</p>
+        </a>
+        <a href="services.html?search=appliance" class="category-card fade-in" aria-label="Appliance Repair services">
+          <div class="category-icon" style="background: linear-gradient(135deg, #60A5FA, #3B82F6);">
+            <i class="fas fa-blender"></i>
+          </div>
+          <h3>Appliance Repair</h3>
+          <p>Washer, fridge &amp; more</p>
+        </a>
+        <a href="services.html?search=locksmith" class="category-card fade-in" aria-label="Locksmith services">
+          <div class="category-icon" style="background: linear-gradient(135deg, #F87171, #EF4444);">
+            <i class="fas fa-key"></i>
+          </div>
+          <h3>Locksmith</h3>
+          <p>Locks, keys &amp; security</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How It Works ===== -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title fade-in">How It Works</h2>
+      <p class="section-subtitle fade-in">Get your home fixed in three simple steps</p>
+      <div class="steps">
+        <div class="step fade-in">
+          <div class="step-number">1</div>
+          <h3>Choose a Service</h3>
+          <p>Browse our categories or search for the exact repair you need. Every service is clearly priced with no hidden fees.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">2</div>
+          <h3>Book Instantly</h3>
+          <p>Pick a date and time that works for you, or tap "Emergency" for immediate help. Confirmation is instant.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">3</div>
+          <h3>Get It Fixed</h3>
+          <p>A verified, background-checked professional arrives at your door. Pay only after the job is done right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Emergency Banner ===== -->
+  <section class="emergency-banner" id="emergency">
+    <div class="container fade-in">
+      <h2><i class="fas fa-bolt"></i> Emergency Repair Service</h2>
+      <p>Burst pipe? Power outage? Broken lock? We dispatch a pro to your door in 30 minutes or less.</p>
+      <div class="emergency-features">
+        <div class="emergency-feature">
+          <i class="fas fa-clock"></i> 30-Minute Response
+        </div>
+        <div class="emergency-feature">
+          <i class="fas fa-headset"></i> 24/7 Availability
+        </div>
+        <div class="emergency-feature">
+          <i class="fas fa-shield-halved"></i> Fully Insured Workers
+        </div>
+        <div class="emergency-feature">
+          <i class="fas fa-hand-holding-dollar"></i> Transparent Pricing
+        </div>
+      </div>
+      <a href="booking.html?emergency=true" class="btn btn-accent btn-lg">
+        <i class="fas fa-bolt"></i> Book Emergency Service
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Top-Rated Workers ===== -->
+  <section class="section workers">
+    <div class="container">
+      <h2 class="section-title fade-in">Top-Rated Professionals</h2>
+      <p class="section-subtitle fade-in">Trusted by thousands — here are some of our best</p>
+      <div class="workers-grid">
+        <div class="worker-card fade-in">
+          <div class="worker-avatar" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
+          <div class="worker-info">
+            <h3>Rajesh Kumar</h3>
+            <p class="worker-profession">Master Electrician</p>
+            <div class="worker-meta">
+              <div class="worker-rating"><i class="fas fa-star"></i> 4.9</div>
+              <span class="worker-jobs">1,240 jobs</span>
+            </div>
+            <a href="booking.html?service=electrician" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+        <div class="worker-card fade-in">
+          <div class="worker-avatar" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
+          <div class="worker-info">
+            <h3>Priya Sharma</h3>
+            <p class="worker-profession">Licensed Plumber</p>
+            <div class="worker-meta">
+              <div class="worker-rating"><i class="fas fa-star"></i> 4.8</div>
+              <span class="worker-jobs">980 jobs</span>
+            </div>
+            <a href="booking.html?service=plumber" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+        <div class="worker-card fade-in">
+          <div class="worker-avatar" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
+          <div class="worker-info">
+            <h3>Anil Verma</h3>
+            <p class="worker-profession">Expert Carpenter</p>
+            <div class="worker-meta">
+              <div class="worker-rating"><i class="fas fa-star"></i> 4.9</div>
+              <span class="worker-jobs">1,560 jobs</span>
+            </div>
+            <a href="booking.html?service=carpenter" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+        <div class="worker-card fade-in">
+          <div class="worker-avatar" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
+          <div class="worker-info">
+            <h3>Meena Patel</h3>
+            <p class="worker-profession">AC Technician</p>
+            <div class="worker-meta">
+              <div class="worker-rating"><i class="fas fa-star"></i> 4.7</div>
+              <span class="worker-jobs">870 jobs</span>
+            </div>
+            <a href="booking.html?service=ac_repair" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="section testimonials">
+    <div class="container">
+      <h2 class="section-title fade-in">What Our Customers Say</h2>
+      <p class="section-subtitle fade-in">Real reviews from real people</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Our kitchen faucet burst at midnight. I booked an emergency plumber on QuickFix and he arrived in 22 minutes. Incredible service — I'm a customer for life."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">SK</div>
+            <div>
+              <h4>Sanjay Kapoor</h4>
+              <p>Mumbai, Maharashtra</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Needed a full-house rewiring for my new apartment. The electrician from QuickFix was professional, punctual, and finished a day ahead of schedule. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">AD</div>
+            <div>
+              <h4>Anita Desai</h4>
+              <p>Bengaluru, Karnataka</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"My AC broke during a 45°C heatwave. QuickFix sent a technician within 30 minutes who diagnosed and fixed it on the spot. The transparent pricing was a huge plus."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">VR</div>
+            <div>
+              <h4>Vikram Rao</h4>
+              <p>Delhi, NCR</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Download App CTA ===== -->
+  <section class="cta-section">
+    <div class="container fade-in">
+      <h2>Get the QuickFix App</h2>
+      <p>Book repairs on the go, track your professional in real time, and pay securely — all from your phone.</p>
+      <div class="cta-buttons">
+        <a href="#" class="cta-store-btn" aria-label="Download on the App Store">
+          <i class="fab fa-apple"></i>
+          <div class="store-text">
+            <small>Download on the</small>
+            <span>App Store</span>
+          </div>
+        </a>
+        <a href="#" class="cta-store-btn" aria-label="Get it on Google Play">
+          <i class="fab fa-google-play"></i>
+          <div class="store-text">
+            <small>Get it on</small>
+            <span>Google Play</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="QuickFix Home">
+            <i class="fas fa-wrench"></i>
+            <span>Quick</span><span>Fix</span>
+          </a>
+          <p>India's fastest home repair platform. Verified professionals at your doorstep in 30 minutes or less.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html?search=electrician">Electrician</a></li>
+            <li><a href="services.html?search=plumber">Plumber</a></li>
+            <li><a href="services.html?search=carpenter">Carpenter</a></li>
+            <li><a href="services.html?search=painter">Painter</a></li>
+            <li><a href="services.html?search=ac">AC Repair</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Partner With Us</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-phone"></i> <span>+91 1800-123-4567</span></li>
+            <li><i class="fas fa-envelope"></i> <span>support@quickfix.in</span></li>
+            <li><i class="fas fa-location-dot"></i> <span>42 MG Road, Bengaluru, Karnataka 560001</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 QuickFix. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

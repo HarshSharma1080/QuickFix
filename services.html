@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse all QuickFix home repair services — electricians, plumbers, carpenters, painters, and more.">
+  <title>Our Services – QuickFix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="QuickFix Home">
+        <i class="fas fa-wrench"></i>
+        <span>Quick</span><span>Fix</span>
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="services.html" class="active" role="menuitem">Services</a></li>
+        <li role="none"><a href="index.html#how-it-works" role="menuitem">How It Works</a></li>
+        <li role="none"><a href="index.html#emergency" role="menuitem">Emergency</a></li>
+        <li role="none"><a href="index.html#contact" role="menuitem">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="index.html#emergency" class="nav-emergency" aria-label="Emergency services available">
+          <i class="fas fa-bolt"></i> Emergency
+        </a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Page Header ===== -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p>Professional home repair services — transparent pricing, verified experts</p>
+    </div>
+  </section>
+
+  <!-- ===== Filters & Services ===== -->
+  <section class="container">
+    <div class="services-filter" role="toolbar" aria-label="Filter services">
+      <button class="filter-btn active" data-filter="all">All Services</button>
+      <button class="filter-btn" data-filter="electrical">Electrical</button>
+      <button class="filter-btn" data-filter="plumbing">Plumbing</button>
+      <button class="filter-btn" data-filter="carpentry">Carpentry</button>
+      <button class="filter-btn" data-filter="painting">Painting</button>
+      <button class="filter-btn" data-filter="cooling">AC &amp; Cooling</button>
+      <button class="filter-btn" data-filter="mechanical">Mechanical</button>
+      <button class="filter-btn" data-filter="appliance">Appliance</button>
+      <button class="filter-btn" data-filter="security">Security</button>
+    </div>
+
+    <div class="services-grid">
+      <!-- Electrical Services -->
+      <div class="service-card fade-in" data-category="electrical">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #FBBF24, #F59E0B);">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>Electrical Wiring</h3>
+        <p>Complete home wiring, re-wiring, and circuit installation by certified electricians. Includes safety inspection and compliance check.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$49 <small>starting</small></div>
+          <a href="booking.html?service=electrician" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card fade-in" data-category="electrical">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #FBBF24, #F59E0B);">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Lighting Installation</h3>
+        <p>Install ceiling lights, chandeliers, under-cabinet LEDs, and outdoor fixtures. Includes wiring and switch setup.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$39 <small>starting</small></div>
+          <a href="booking.html?service=electrician" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card fade-in" data-category="electrical">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #FBBF24, #F59E0B);">
+          <i class="fas fa-plug"></i>
+        </div>
+        <h3>Switch &amp; Outlet Repair</h3>
+        <p>Fix faulty switches, install new power outlets, replace circuit breakers, and resolve short-circuit issues safely.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$29 <small>starting</small></div>
+          <a href="booking.html?service=electrician" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Plumbing Services -->
+      <div class="service-card fade-in" data-category="plumbing">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">
+          <i class="fas fa-faucet-drip"></i>
+        </div>
+        <h3>Leak Repair</h3>
+        <p>Fix leaking taps, pipes, and hidden water leaks. Our plumbers use advanced detection equipment to find and seal every leak.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$59 <small>starting</small></div>
+          <a href="booking.html?service=plumber" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card fade-in" data-category="plumbing">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">
+          <i class="fas fa-toilet"></i>
+        </div>
+        <h3>Drain &amp; Toilet Repair</h3>
+        <p>Unclog drains, fix running toilets, and repair sewer lines. Same-day service with professional-grade tools.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$69 <small>starting</small></div>
+          <a href="booking.html?service=plumber" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card fade-in" data-category="plumbing">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">
+          <i class="fas fa-shower"></i>
+        </div>
+        <h3>Fixture Installation</h3>
+        <p>Install faucets, showers, water heaters, and dishwashers. Includes plumbing hook-up and leak testing.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$79 <small>starting</small></div>
+          <a href="booking.html?service=plumber" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Carpentry Services -->
+      <div class="service-card fade-in" data-category="carpentry">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #A78BFA, #7C3AED);">
+          <i class="fas fa-hammer"></i>
+        </div>
+        <h3>Furniture Assembly</h3>
+        <p>Assemble flat-pack furniture, bookshelves, wardrobes, and desks. We handle IKEA, Pepperfry, and all major brands.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$49 <small>starting</small></div>
+          <a href="booking.html?service=carpenter" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card fade-in" data-category="carpentry">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #A78BFA, #7C3AED);">
+          <i class="fas fa-door-open"></i>
+        </div>
+        <h3>Door &amp; Window Repair</h3>
+        <p>Fix squeaky doors, broken hinges, jammed windows, and damaged frames. Includes alignment and hardware replacement.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$59 <small>starting</small></div>
+          <a href="booking.html?service=carpenter" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Painting Services -->
+      <div class="service-card fade-in" data-category="painting">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #F472B6, #EC4899);">
+          <i class="fas fa-paint-roller"></i>
+        </div>
+        <h3>Interior Painting</h3>
+        <p>Full room or accent wall painting with premium paints. Includes surface preparation, priming, and two coats of paint.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$79 <small>per room</small></div>
+          <a href="booking.html?service=painter" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card fade-in" data-category="painting">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #F472B6, #EC4899);">
+          <i class="fas fa-brush"></i>
+        </div>
+        <h3>Exterior Painting</h3>
+        <p>Weather-resistant exterior painting for walls, fences, and trim. Includes pressure washing and surface repair.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$149 <small>starting</small></div>
+          <a href="booking.html?service=painter" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+
+      <!-- AC & Cooling Services -->
+      <div class="service-card fade-in" data-category="cooling">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #34D399, #10B981);">
+          <i class="fas fa-snowflake"></i>
+        </div>
+        <h3>AC Service &amp; Repair</h3>
+        <p>Deep cleaning, gas refilling, compressor repair, and full AC diagnostics. Covers split, window, and central systems.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$89 <small>starting</small></div>
+          <a href="booking.html?service=ac_repair" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card fade-in" data-category="cooling">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #34D399, #10B981);">
+          <i class="fas fa-fan"></i>
+        </div>
+        <h3>AC Installation</h3>
+        <p>Professional installation of split and window ACs. Includes mounting, copper piping, drainage setup, and testing.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$129 <small>starting</small></div>
+          <a href="booking.html?service=ac_repair" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Mechanical Services -->
+      <div class="service-card fade-in" data-category="mechanical">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #FB923C, #F97316);">
+          <i class="fas fa-gears"></i>
+        </div>
+        <h3>Home Machinery Repair</h3>
+        <p>Fix garage door openers, water pumps, generators, and other home machinery. Covers diagnosis and parts replacement.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$69 <small>starting</small></div>
+          <a href="booking.html?service=mechanic" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Appliance Services -->
+      <div class="service-card fade-in" data-category="appliance">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #60A5FA, #3B82F6);">
+          <i class="fas fa-blender"></i>
+        </div>
+        <h3>Kitchen Appliance Repair</h3>
+        <p>Fix refrigerators, microwaves, ovens, dishwashers, and chimneys. All major brands covered with genuine parts.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$59 <small>starting</small></div>
+          <a href="booking.html?service=appliance" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card fade-in" data-category="appliance">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #60A5FA, #3B82F6);">
+          <i class="fas fa-shirt"></i>
+        </div>
+        <h3>Washing Machine Repair</h3>
+        <p>Diagnose and repair front-load, top-load, and semi-automatic washing machines. Includes drum, motor, and PCB fixes.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$49 <small>starting</small></div>
+          <a href="booking.html?service=appliance" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Security Services -->
+      <div class="service-card fade-in" data-category="security">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #F87171, #EF4444);">
+          <i class="fas fa-key"></i>
+        </div>
+        <h3>Lock Replacement</h3>
+        <p>Replace old locks, install deadbolts, smart locks, and multi-point locking systems for enhanced home security.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$49 <small>starting</small></div>
+          <a href="booking.html?service=locksmith" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card fade-in" data-category="security">
+        <div class="service-card-icon" style="background: linear-gradient(135deg, #F87171, #EF4444);">
+          <i class="fas fa-lock"></i>
+        </div>
+        <h3>Emergency Lockout</h3>
+        <p>Locked out of your home? Our locksmiths arrive in under 30 minutes to get you back inside without damaging your lock.</p>
+        <div class="service-card-footer">
+          <div class="service-price">$39 <small>starting</small></div>
+          <a href="booking.html?service=locksmith" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="QuickFix Home">
+            <i class="fas fa-wrench"></i>
+            <span>Quick</span><span>Fix</span>
+          </a>
+          <p>India's fastest home repair platform. Verified professionals at your doorstep in 30 minutes or less.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html?search=electrician">Electrician</a></li>
+            <li><a href="services.html?search=plumber">Plumber</a></li>
+            <li><a href="services.html?search=carpenter">Carpenter</a></li>
+            <li><a href="services.html?search=painter">Painter</a></li>
+            <li><a href="services.html?search=ac">AC Repair</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Partner With Us</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-phone"></i> <span>+91 1800-123-4567</span></li>
+            <li><i class="fas fa-envelope"></i> <span>support@quickfix.in</span></li>
+            <li><i class="fas fa-location-dot"></i> <span>42 MG Road, Bengaluru, Karnataka 560001</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 QuickFix. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
