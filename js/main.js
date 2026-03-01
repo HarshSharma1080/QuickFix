@@ -223,13 +223,17 @@
       summaryService.textContent = service
         ? serviceSelect.options[serviceSelect.selectedIndex].text
         : "Not selected";
-      summaryDate.textContent = date
-        ? new Date(date + "T00:00:00").toLocaleDateString("en-US", {
-            weekday: "short",
-            month: "short",
-            day: "numeric"
-          })
-        : "Not selected";
+      if (date) {
+        var parts = date.split("-");
+        var d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+        summaryDate.textContent = d.toLocaleDateString("en-US", {
+          weekday: "short",
+          month: "short",
+          day: "numeric"
+        });
+      } else {
+        summaryDate.textContent = "Not selected";
+      }
       summaryTime.textContent = time || "Not selected";
 
       var price = servicePrices[service] || 0;
