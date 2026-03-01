@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a home repair professional on QuickFix. Choose your service, pick a time, and get it fixed.">
+  <title>Book a Service – QuickFix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="QuickFix Home">
+        <i class="fas fa-wrench"></i>
+        <span>Quick</span><span>Fix</span>
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+        <li role="none"><a href="index.html#how-it-works" role="menuitem">How It Works</a></li>
+        <li role="none"><a href="index.html#emergency" role="menuitem">Emergency</a></li>
+        <li role="none"><a href="index.html#contact" role="menuitem">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="index.html#emergency" class="nav-emergency" aria-label="Emergency services available">
+          <i class="fas fa-bolt"></i> Emergency
+        </a>
+        <a href="booking.html" class="btn btn-primary btn-sm active">Book Now</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Booking Section ===== -->
+  <section class="booking-section">
+    <div class="container">
+      <div class="booking-layout">
+
+        <!-- Booking Form -->
+        <div class="booking-form-card fade-in">
+          <h2><i class="fas fa-calendar-check"></i> Book a Service</h2>
+          <form id="bookingForm" novalidate>
+
+            <!-- Service Type -->
+            <div class="form-group">
+              <label for="service">Service Type <span class="required">*</span></label>
+              <select id="service" class="form-control" required aria-required="true">
+                <option value="">— Select a service —</option>
+                <option value="electrician">Electrician</option>
+                <option value="plumber">Plumber</option>
+                <option value="carpenter">Carpenter</option>
+                <option value="painter">Painter</option>
+                <option value="ac_repair">AC Repair</option>
+                <option value="mechanic">Mechanic</option>
+                <option value="appliance">Appliance Repair</option>
+                <option value="locksmith">Locksmith</option>
+              </select>
+              <span class="error-message">Please select a service</span>
+            </div>
+
+            <!-- Date & Time -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred Date <span class="required">*</span></label>
+                <input type="date" id="date" class="form-control" required aria-required="true">
+                <span class="error-message">Please select a date</span>
+              </div>
+              <div class="form-group">
+                <label for="time">Preferred Time <span class="required">*</span></label>
+                <select id="time" class="form-control" required aria-required="true">
+                  <option value="">— Select time —</option>
+                  <option value="08:00 AM">08:00 AM</option>
+                  <option value="09:00 AM">09:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="01:00 PM">01:00 PM</option>
+                  <option value="02:00 PM">02:00 PM</option>
+                  <option value="03:00 PM">03:00 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="05:00 PM">05:00 PM</option>
+                  <option value="06:00 PM">06:00 PM</option>
+                  <option value="07:00 PM">07:00 PM</option>
+                </select>
+                <span class="error-message">Please select a time</span>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+              <label for="address">Service Address <span class="required">*</span></label>
+              <input type="text" id="address" class="form-control" placeholder="e.g., 42 MG Road, Apt 301, Bengaluru" required aria-required="true">
+              <span class="error-message">Please enter your address</span>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+              <label for="description">Describe the Issue</label>
+              <textarea id="description" class="form-control" placeholder="Tell us what needs fixing — the more detail, the faster the repair (e.g., kitchen tap leaking from base, water pooling on floor)"></textarea>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" class="form-control" placeholder="Your full name" required aria-required="true">
+                <span class="error-message">Please enter your name</span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210" required aria-required="true">
+                <span class="error-message">Please enter a valid phone number</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" class="form-control" placeholder="you@example.com" required aria-required="true">
+              <span class="error-message">Please enter a valid email address</span>
+            </div>
+
+            <!-- Emergency Toggle -->
+            <div class="emergency-toggle">
+              <label class="toggle-switch">
+                <input type="checkbox" id="emergency" aria-label="Toggle emergency service">
+                <span class="toggle-slider"></span>
+              </label>
+              <div class="emergency-toggle-text">
+                <h4><i class="fas fa-bolt"></i> Emergency Service</h4>
+                <p>Priority dispatch within 30 minutes (+$25 fee)</p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+              <i class="fas fa-check-circle"></i> Confirm Booking
+            </button>
+          </form>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <div class="booking-summary fade-in">
+          <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+          <div class="summary-item">
+            <span>Service</span>
+            <span id="summaryService">Not selected</span>
+          </div>
+          <div class="summary-item">
+            <span>Date</span>
+            <span id="summaryDate">Not selected</span>
+          </div>
+          <div class="summary-item">
+            <span>Time</span>
+            <span id="summaryTime">Not selected</span>
+          </div>
+          <div class="summary-item">
+            <span>Service Fee</span>
+            <span id="summaryPrice">$0</span>
+          </div>
+          <div class="summary-item">
+            <span>Emergency Fee</span>
+            <span id="summaryEmergency">$0</span>
+          </div>
+          <div class="summary-total">
+            <span>Total</span>
+            <span id="summaryTotal">$0</span>
+          </div>
+          <button type="button" id="confirmBooking" class="btn btn-accent btn-lg">
+            <i class="fas fa-bolt"></i> Book Now
+          </button>
+          <div class="summary-note">
+            <i class="fas fa-info-circle"></i>
+            <span>You won't be charged until the job is complete. Payment is collected after you approve the work.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Confirmation Modal ===== -->
+  <div class="modal-overlay" id="confirmationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-icon" aria-hidden="true">
+        <i class="fas fa-check"></i>
+      </div>
+      <h2 id="modalTitle">Booking Confirmed!</h2>
+      <p>Your service request has been received. A verified professional will be assigned shortly. You'll receive an SMS and email confirmation within 2 minutes.</p>
+      <a href="index.html" class="btn btn-primary modal-close">Back to Home</a>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="QuickFix Home">
+            <i class="fas fa-wrench"></i>
+            <span>Quick</span><span>Fix</span>
+          </a>
+          <p>India's fastest home repair platform. Verified professionals at your doorstep in 30 minutes or less.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html?search=electrician">Electrician</a></li>
+            <li><a href="services.html?search=plumber">Plumber</a></li>
+            <li><a href="services.html?search=carpenter">Carpenter</a></li>
+            <li><a href="services.html?search=painter">Painter</a></li>
+            <li><a href="services.html?search=ac">AC Repair</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Partner With Us</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-phone"></i> <span>+91 1800-123-4567</span></li>
+            <li><i class="fas fa-envelope"></i> <span>support@quickfix.in</span></li>
+            <li><i class="fas fa-location-dot"></i> <span>42 MG Road, Bengaluru, Karnataka 560001</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 QuickFix. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
