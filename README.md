@@ -42,6 +42,23 @@ QuickFix is a web platform for booking home repair services instantly — like B
 
 3. Visit `http://localhost:8080` in your browser.
 
+## Deployment
+
+This project includes a GitHub Actions workflow that automatically deploys the site to **GitHub Pages** on every push to `main`.
+
+### To publish the site:
+
+1. Go to your repository on GitHub.
+2. Navigate to **Settings → Pages**.
+3. Under **Source**, select **GitHub Actions**.
+4. Push a commit to the `main` branch (or trigger the workflow manually from the **Actions** tab).
+5. Once the workflow completes, your site will be live at:
+   ```
+   https://<your-username>.github.io/QuickFix/
+   ```
+
+You can also trigger a deployment manually from the **Actions** tab using the "Run workflow" button.
+
 ## Project Structure
 
 ```
