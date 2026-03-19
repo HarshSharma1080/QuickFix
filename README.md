@@ -42,6 +42,36 @@ QuickFix is a web platform for booking home repair services instantly — like B
 
 3. Visit `http://localhost:8080` in your browser.
 
+## Basic Security Self-Check (for your own site)
+
+If you want to test your own website safely, use this defensive checklist:
+
+1. **Keep dependencies updated**
+   - If you add libraries later, update them regularly and remove unused ones.
+
+2. **Validate all form inputs**
+   - Never trust user input.
+   - Validate required fields, email, phone, and length limits on both client and server (when you add a backend).
+
+3. **Prevent XSS**
+   - Do not inject raw user input into `innerHTML`.
+   - Prefer `textContent` when rendering untrusted text.
+
+4. **Use HTTPS in production**
+   - Always deploy over HTTPS and avoid mixed content (HTTP assets on HTTPS pages).
+
+5. **Add security headers when deploying**
+   - Configure headers like Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, and Referrer-Policy on your hosting platform.
+
+6. **Harden authentication (if you add login later)**
+   - Hash passwords with a strong algorithm, enforce strong passwords, and add rate limiting for login attempts.
+
+7. **Run automated checks**
+   - Use browser DevTools + Lighthouse and OWASP ZAP baseline scans against your own local/staging environment.
+
+8. **Test safely and legally**
+   - Only test apps and domains you own or have explicit permission to test.
+
 ## Deployment
 
 This project includes a GitHub Actions workflow that automatically deploys the site to **GitHub Pages** on every push to `main`.
